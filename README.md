@@ -5,10 +5,10 @@ A Python-based tool for registering California Landscape Metrics (CLM) and Calif
 ## Features
 
 - Automated registration of CLM and ITS datasets to CKAN
-- Intelligent dataset naming and categorization
+- Dataset naming improvement
 - Automatic keyword generation using LLM
 - Spatial metadata integration
-- Support for WMS, WCS, and WFS endpoints
+- WMS, WCS, and WFS endpoints validation
 - Dataset removal capabilities
 
 ## Prerequisites
