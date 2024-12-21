@@ -1,0 +1,947 @@
+{
+    "clm-trail-density": [
+        "California",
+        "trail density",
+        "recreation"
+    ],
+    "clm-american-indian-land-areas": [
+        "California",
+        "Tribal land",
+        "American Indian"
+    ],
+    "clm-unemployment": [
+        "California",
+        "unemployment",
+        "socioeconomic"
+    ],
+    "clm-poverty": [
+        "California",
+        "poverty",
+        "equitable opportunity"
+    ],
+    "clm-housing-burden": [
+        "California",
+        "housing burden",
+        "low-income households"
+    ],
+    "clm-multi-race-except-part-american-indian-pop-concentration-sierra-nevada": [
+        "Sierra Nevada",
+        "multiracial population",
+        "population concentration"
+    ],
+    "clm-multi-race-except-part-american-indian-pop-concentration-southern-ca": [
+        "Southern California",
+        "Multiracial population",
+        "population concentration"
+    ],
+    "clm-multi-race-except-part-american-indian-pop-concentration-central-ca": [
+        "Central California",
+        "multiracial population",
+        "population concentration"
+    ],
+    "clm-hispanic-and-or-black-indigenous-or-people-of-color-hspbipoc-population-concentration-sierra-nev": [
+        "Sierra Nevada",
+        "population concentration",
+        "environmental justice"
+    ],
+    "clm-hispanic-and-or-black-indigenous-or-people-of-color-hspbipoc-population-concentration-northern-c": [
+        "Northern California",
+        "population concentration",
+        "Hispanic population"
+    ],
+    "clm-hispanic-and-or-black-indigenous-or-people-of-color-hspbipoc-population-concentration-southern-c": [
+        "Southern California",
+        "population concentration",
+        "environmental justice"
+    ],
+    "clm-hispanic-and-or-black-indigenous-or-people-of-color-hspbipoc-population-concentration-central-ca": [
+        "Central California",
+        "population concentration",
+        "Hispanic population"
+    ],
+    "clm-black-and-african-american-population-concentration-northern-ca": [
+        "Northern California",
+        "Black population",
+        "population concentration"
+    ],
+    "clm-black-and-african-american-population-concentration-southern-ca": [
+        "Southern California",
+        "Black population",
+        "population concentration"
+    ],
+    "clm-black-and-african-american-population-concentration-central-ca": [
+        "Central California",
+        "Black population",
+        "population concentration"
+    ],
+    "clm-low-income-population-concentration-sierra-nevada": [
+        "Sierra Nevada",
+        "low income",
+        "population concentration"
+    ],
+    "clm-low-income-population-concentration-northern-ca": [
+        "Northern California",
+        "low income",
+        "population concentration"
+    ],
+    "clm-low-income-population-concentration-southern-ca": [
+        "Southern California",
+        "low income",
+        "population concentration"
+    ],
+    "clm-low-income-population-concentration-central-ca": [
+        "Central California",
+        "low income",
+        "population concentration"
+    ],
+    "clm-hispanic-and-latino-population-concentration-sierra-nevada": [
+        "Sierra Nevada",
+        "Hispanic population",
+        "population concentration"
+    ],
+    "clm-hispanic-and-latino-population-concentration-northern-ca": [
+        "Northern California",
+        "Hispanic population",
+        "population concentration"
+    ],
+    "clm-hispanic-and-latino-population-concentration-southern-ca": [
+        "Southern California",
+        "Hispanic population",
+        "population concentration"
+    ],
+    "clm-hispanic-and-latino-population-concentration-central-ca": [
+        "Central California",
+        "Hispanic population",
+        "population concentration"
+    ],
+    "clm-asian-population-concentration-sierra-nevada": [
+        "Asian population",
+        "Sierra Nevada",
+        "population concentration"
+    ],
+    "clm-asian-population-concentration-northern-ca": [
+        "Northern California",
+        "Asian population",
+        "population concentration"
+    ],
+    "clm-asian-population-concentration-southern-ca": [
+        "Southern California",
+        "Asian population",
+        "population concentration"
+    ],
+    "clm-asian-population-concentration-central-ca": [
+        "Central California",
+        "Asian population",
+        "population concentration"
+    ],
+    "clm-american-indian-or-alaska-native-race-alone-and-multi-race-population-concentration-sierra-nevad": [
+        "Sierra Nevada",
+        "American Indian",
+        "population concentration"
+    ],
+    "clm-american-indian-or-alaska-native-race-alone-and-multi-race-population-concentration-northern-ca": [
+        "Northern California",
+        "American Indian",
+        "population concentration"
+    ],
+    "clm-american-indian-or-alaska-native-race-alone-and-multi-race-population-concentration-southern-ca": [
+        "Southern California",
+        "American Indian",
+        "population concentration"
+    ],
+    "clm-riparian-habitat": [
+        "California",
+        "riparian",
+        "flood"
+    ],
+    "clm-aquatic-species-richness": [
+        "California",
+        "species richness",
+        "biodiversity"
+    ],
+    "clm-wetland-diversity": [
+        "California",
+        "wetlands",
+        "habitats"
+    ],
+    "clm-meadow-sensitivity-index": [
+        "California",
+        "wetland",
+        "NDWI"
+    ],
+    "clm-forest-raptor-species-richness": [
+        "California",
+        "raptor",
+        "species richness"
+    ],
+    "clm-wildlife-species-richness": [
+        "California",
+        "species richness",
+        "biodiversity"
+    ],
+    "clm-open-range-raptor-species-richness": [
+        "California",
+        "raptor",
+        "species richness"
+    ],
+    "clm-federally-threatened-and-endangered-vertebrate-species-richness": [
+        "California",
+        "species richness",
+        "endangered species"
+    ],
+    "clm-hummingbird-species-richness": [
+        "Hummingbird",
+        "species richness",
+        "California"
+    ],
+    "clm-california-black-oak-stands": [
+        "California",
+        "Quercus kelloggii",
+        "wildlife habitat"
+    ],
+    "clm-giant-sequoia-stands": [
+        "Giant Sequoia",
+        "Sierra Nevada",
+        "biodiversity"
+    ],
+    "clm-joshua-tree-range": [
+        "Joshua Tree",
+        "range map",
+        "California"
+    ],
+    "clm-distribution-of-redwood-structure-classes": [
+        "Redwood",
+        "forest",
+        "California"
+    ],
+    "clm-hermes-copper-butterfly-range": [
+        "Lycaena hermes",
+        "California",
+        "biodiversity"
+    ],
+    "clm-laguna-mountains-skipper-habitat-range": [
+        "Laguna Mountains skipper",
+        "endangered species",
+        "Southern California"
+    ],
+    "clm-quino-checkerspot-butterfly": [
+        "Quino checkerspot butterfly",
+        "critical habitat",
+        "Southern California"
+    ],
+    "clm-mountain-yellow-legged-frog-suitable-habitat": [
+        "Mountain Yellow-legged Frog",
+        "habitat",
+        "Sierra Nevada"
+    ],
+    "clm-california-red-legged-frog": [
+        "California",
+        "Rana draytonii",
+        "habitat distribution"
+    ],
+    "clm-ringtail-cat-suitable-habitat": [
+        "Ringtail Cat",
+        "habitat",
+        "California"
+    ],
+    "clm-pacific-fisher-north-coast-predicted-habitat": [
+        "Pacific Fisher",
+        "habitat",
+        "California"
+    ],
+    "clm-peninsular-bighorn-sheep": [
+        "Peninsular Bighorn Sheep",
+        "California",
+        "critical habitat"
+    ],
+    "clm-pacific-fisher-suitable-habitat": [
+        "Pacific Fisher",
+        "habitat",
+        "Sierra Nevada"
+    ],
+    "clm-humboldt-marten-predicted-distribution": [
+        "Humboldt marten",
+        "California",
+        "biodiversity"
+    ],
+    "clm-mountain-lion-suitable-habitat": [
+        "California",
+        "Mountain lion",
+        "habitat"
+    ],
+    "clm-pacific-marten-suitable-habitat": [
+        "Pacific Marten",
+        "habitat",
+        "California"
+    ],
+    "clm-marbled-murrelet-suitable-nesting-habitat": [
+        "Marbled Murrelet",
+        "California",
+        "nesting habitat"
+    ],
+    "clm-band-tailed-pigeon-suitable-habitat": [
+        "Band-Tailed Pigeon",
+        "habitat",
+        "California"
+    ],
+    "clm-loggerhead-shrike-suitable-habitat": [
+        "Loggerhead Shrike",
+        "habitat",
+        "California"
+    ],
+    "clm-northern-spotted-owl-suitable-habitat": [
+        "Northern Spotted Owl",
+        "habitat",
+        "California"
+    ],
+    "clm-nuttalls-woodpecker-suitable-habitat": [
+        "Nuttall Woodpecker",
+        "habitat",
+        "California"
+    ],
+    "clm-northern-spotted-owl-nesting-and-roosting-forest-cover-type-suitability-index": [
+        "Northern Spotted Owl",
+        "California",
+        "forest suitability"
+    ],
+    "clm-northern-spotted-owl-habitat-topo-climatic-fire-refugia": [
+        "Northern Spotted Owl",
+        "fire refugia",
+        "California"
+    ],
+    "clm-marbled-murrelet-critical-habitat": [
+        "California",
+        "Marbled Murrelet",
+        "critical habitat"
+    ],
+    "clm-northern-spotted-owl-changes-in-suitable-habitat-1993-2022": [
+        "Northern California",
+        "Northern spotted owl",
+        "habitat suitability"
+    ],
+    "clm-california-spotted-owl-cso-suitable-habitat": [
+        "California",
+        "spotted owl",
+        "habitat"
+    ],
+    "clm-least-bells-vireo-nesting-habitat": [
+        "Least Bell Vireo",
+        "riparian vegetation",
+        "California"
+    ],
+    "clm-northern-goshawk-suitable-habitat": [
+        "Northern goshawk",
+        "habitat",
+        "California"
+    ],
+    "clm-california-coastal-chinook-salmon-distribution": [
+        "California",
+        "Chinook",
+        "habitat"
+    ],
+    "clm-california-coastal-chinook-salmon-critical-habitat": [
+        "California",
+        "Chinook salmon",
+        "critical habitat"
+    ],
+    "clm-northern-california-winter-steelhead-distribution": [
+        "Northern California",
+        "steelhead",
+        "distribution"
+    ],
+    "clm-northern-california-coast-coho-salmon-distribution": [
+        "California",
+        "coho salmon",
+        "species distribution"
+    ],
+    "clm-unarmored-threespine-stickleback-habitat": [
+        "California",
+        "Unarmored threespine stickleback",
+        "habitat"
+    ],
+    "clm-northern-california-summer-steelhead-distribution": [
+        "Northern California",
+        "steelhead",
+        "distribution"
+    ],
+    "clm-northern-california-coast-coho-salmon-critical-habitat": [
+        "Coho Salmon",
+        "California",
+        "critical habitat"
+    ],
+    "clm-northern-california-dpu-steelhead-critical-habitat": [
+        "Steelhead",
+        "critical habitat",
+        "California"
+    ],
+    "clm-present-day-connectivity-in-california-omniscape": [
+        "California",
+        "connectivity",
+        "wildlife"
+    ],
+    "clm-full-climate-connectivity-network": [
+        "California",
+        "connectivity",
+        "biodiversity"
+    ],
+    "clm-terrestrial-connectivity": [
+        "California",
+        "connectivity",
+        "biodiversity"
+    ],
+    "clm-functional-species-richness-predators": [
+        "California",
+        "predators",
+        "functional species richness"
+    ],
+    "clm-functional-species-richness-herbivores": [
+        "California",
+        "herbivores",
+        "ecosystem services"
+    ],
+    "clm-functional-species-richness-cavity-nesters-and-excavators": [
+        "California",
+        "Cavity Nesters",
+        "Functional Species Richness"
+    ],
+    "clm-functional-species-richness-seed-spore-dispersers": [
+        "California",
+        "Functional Species Richness",
+        "Seed Spore Dispersers"
+    ],
+    "clm-functional-species-richness-insectivores": [
+        "California",
+        "insectivores",
+        "biodiversity"
+    ],
+    "clm-functional-species-richness-soil-aerators": [
+        "California",
+        "soil aerators",
+        "functional species richness"
+    ],
+    "clm-percent-impervious-surface": [
+        "California",
+        "impervious surface",
+        "flooding"
+    ],
+    "clm-precipitation-minus-actual-evapotranspiration-during-avg-conditions": [
+        "California",
+        "runoff",
+        "evapotranspiration"
+    ],
+    "clm-actual-evapotranspiration-and-precipitation-ratio-during-drought": [
+        "California",
+        "evapotranspiration",
+        "drought"
+    ],
+    "clm-change-in-average-climatic-water-deficit": [
+        "California",
+        "climatic water deficit",
+        "MIROC"
+    ],
+    "clm-groundwater-basin-boundaries": [
+        "California",
+        "groundwater",
+        "basins"
+    ],
+    "clm-drought-sensitivity": [
+        "California",
+        "drought",
+        "vegetation"
+    ],
+    "clm-probability-of-fire-severity-low": [
+        "California",
+        "fire severity",
+        "Pyrologix"
+    ],
+    "clm-total-fuel-dead-and-down-load": [
+        "California",
+        "fuel load",
+        "fire severity"
+    ],
+    "clm-standing-dead-and-ladder-fuels": [
+        "California",
+        "fire dynamics",
+        "ladder fuels"
+    ],
+    "clm-total-fuel-exposed-to-fire": [
+        "California",
+        "fire dynamics",
+        "biomass"
+    ],
+    "clm-probability-of-fire-severity-high": [
+        "California",
+        "fire severity",
+        "Pyrologix"
+    ],
+    "clm-probability-of-fire-severity-moderate": [
+        "California",
+        "fire severity",
+        "Pyrologix"
+    ],
+    "clm-annual-burn-probability": [
+        "California",
+        "wildfire",
+        "burn probability"
+    ],
+    "clm-fire-return-interval-departure-frid-current-fire-return-interval-since-1908": [
+        "California",
+        "fire",
+        "FRID"
+    ],
+    "clm-fire-return-interval-departure-frid-mean-percent-since-1908": [
+        "California",
+        "fire dynamics",
+        "fire return interval"
+    ],
+    "clm-fire-return-interval-departure-frid-current-fire-return-interval-since-1970": [
+        "California",
+        "fire dynamics",
+        "fire return interval"
+    ],
+    "clm-fire-return-interval-departure-frid-mean-percent-since-1970": [
+        "California",
+        "fire dynamics",
+        "FRID"
+    ],
+    "clm-fire-return-interval-departure-frid-mean-condition-class": [
+        "California",
+        "fire dynamics",
+        "FRID"
+    ],
+    "clm-fire-return-interval-departure-frid-time-since-last-fire": [
+        "California",
+        "fire",
+        "Fire Return Interval Departure"
+    ],
+    "clm-gold-spotted-borer-presence-and-rate-of-spread": [
+        "California",
+        "goldspotted oak borer",
+        "forest damage"
+    ],
+    "clm-tree-mortality-past-1-year": [
+        "California",
+        "tree mortality",
+        "canopy cover"
+    ],
+    "clm-climate-refugia-baseline-historical-1981-2010": [
+        "California",
+        "climate refugia",
+        "vegetation"
+    ],
+    "clm-climate-refugia-combined-model-miroc-model-hotter-and-drier-and-cnrm-cm5-wetter-and-warmer": [
+        "California",
+        "climate refugia",
+        "habitat types"
+    ],
+    "clm-shrub-resiliency-number-of-disturbance-events-per-15-year-intervals-since-1975": [
+        "California",
+        "fire",
+        "shrub"
+    ],
+    "clm-tree-mortality-past-5-years": [
+        "California",
+        "tree mortality",
+        "canopy cover"
+    ],
+    "clm-multi-stressor-refugia": [
+        "California",
+        "refugia",
+        "disturbance"
+    ],
+    "clm-time-since-last-disturbance": [
+        "California",
+        "disturbance",
+        "Sierra Nevada"
+    ],
+    "clm-risk-of-tree-dieoff-during-drought": [
+        "California",
+        "drought",
+        "tree dieoff"
+    ],
+    "clm-cumulative-shrub-cover-loss": [
+        "California",
+        "shrub cover",
+        "disturbance"
+    ],
+    "clm-cumulative-tree-cover-loss": [
+        "California",
+        "tree cover loss",
+        "disturbance"
+    ],
+    "clm-climate-refugia-miroc-model-hotter-and-drier-2010-2039": [
+        "California",
+        "climate refugia",
+        "MIROC model"
+    ],
+    "clm-climate-refugia-miroc-model-hotter-and-drier-2070-2099": [
+        "California",
+        "climate refugia",
+        "MIROC model"
+    ],
+    "clm-climate-refugia-miroc-model-hotter-and-drier-2040-2069": [
+        "California",
+        "climate refugia",
+        "habitat types"
+    ],
+    "clm-early-seral-stage-distribution": [
+        "California",
+        "forest",
+        "seral stage"
+    ],
+    "clm-tree-cover-ratio": [
+        "California",
+        "tree cover",
+        "vegetation"
+    ],
+    "clm-absolute-change-in-herbaceous-cover": [
+        "California",
+        "herbaceous cover",
+        "land cover change"
+    ],
+    "clm-shrub-cover-ratio": [
+        "California",
+        "shrub cover",
+        "vegetation"
+    ],
+    "clm-herbaceous-cover-ratio": [
+        "California",
+        "herbaceous cover",
+        "vegetation"
+    ],
+    "clm-seral-stage-distribution": [
+        "California",
+        "seral stage",
+        "forest resilience"
+    ],
+    "clm-late-seral-stage-distribution": [
+        "California",
+        "forest",
+        "seral stage"
+    ],
+    "clm-shrublands-with-low-natural-regeneration-potential-post-fire": [
+        "California",
+        "shrubland",
+        "fire recovery"
+    ],
+    "clm-distribution-of-above-ground-live-biomass-in-vegetation-type-categories-shrub-facultative-seedin": [
+        "California",
+        "biomass",
+        "shrub"
+    ],
+    "clm-distribution-of-above-ground-live-biomass-in-vegetation-type-categories-shrub-obligate-seeding": [
+        "California",
+        "shrub",
+        "biomass"
+    ],
+    "clm-distribution-of-above-ground-live-biomass-in-vegetation-type-categories-shrub-obligate-resprouti": [
+        "California",
+        "shrub",
+        "biomass"
+    ],
+    "clm-distribution-of-above-ground-live-biomass-in-vegetation-type-categories-herb": [
+        "California",
+        "biomass",
+        "shrublands"
+    ],
+    "clm-distribution-of-above-ground-live-biomass-in-vegetation-type-categories-tree": [
+        "California",
+        "biomass",
+        "shrublands"
+    ],
+    "clm-density-all-trees-per-acre-1-dbh": [
+        "California",
+        "forest",
+        "trees per acre"
+    ],
+    "clm-basal-area": [
+        "California",
+        "forest",
+        "basal area"
+    ],
+    "clm-southern-ca-large-tree-density-30-dbh": [
+        "California",
+        "large trees",
+        "forest management"
+    ],
+    "clm-central-ca-large-tree-density-30-dbh": [
+        "California",
+        "large trees",
+        "forest management"
+    ],
+    "clm-canopy-vegetation-height": [
+        "California",
+        "canopy",
+        "biomass"
+    ],
+    "clm-fsh-percent-canopy-cover": [
+        "California",
+        "canopy cover",
+        "heterogeneity"
+    ],
+    "clm-fsh-fine-scale-heterogeneity-index": [
+        "California",
+        "forest structure",
+        "fractal dimension"
+    ],
+    "clm-canopy-layer-count": [
+        "California",
+        "canopy",
+        "forest"
+    ],
+    "clm-natural-conifer-regeneration-probability": [
+        "conifer",
+        "regeneration",
+        "Sierra Nevada"
+    ],
+    "clm-canopy-cover": [
+        "California",
+        "canopy cover",
+        "habitat"
+    ],
+    "clm-sdi-proportion-of-max-reineke-1933": [
+        "California",
+        "forest",
+        "SDI"
+    ],
+    "clm-sdi-proportion-of-max-zeide-1983": [
+        "California",
+        "forest",
+        "SDI"
+    ],
+    "clm-northern-ca-large-tree-density-40-dbh": [
+        "Northern CA",
+        "large trees",
+        "forest management"
+    ],
+    "clm-northern-ca-large-tree-density-30-40-dbh": [
+        "Northern CA",
+        "large trees",
+        "forest management"
+    ],
+    "clm-sierra-nevada-large-tree-density-24-30-dbh": [
+        "Sierra Nevada",
+        "large trees",
+        "forest management"
+    ],
+    "clm-sierra-nevada-large-tree-density-30-dbh": [
+        "Sierra Nevada",
+        "forest",
+        "large trees"
+    ],
+    "clm-density-snags-20-299": [
+        "California",
+        "snags",
+        "forest"
+    ],
+    "clm-density-snags-30-399": [
+        "California",
+        "snags",
+        "forest"
+    ],
+    "clm-density-snags-40-or-greater": [
+        "California",
+        "snags",
+        "forest"
+    ],
+    "clm-sdi-stand-density-index-reineke-1933": [
+        "California",
+        "Stand Density Index",
+        "forest"
+    ],
+    "clm-sdi-stand-density-index-zeide-1983": [
+        "California",
+        "forest",
+        "SDI"
+    ],
+    "clm-total-aboveground-carbon": [
+        "California",
+        "carbon",
+        "ecosystem"
+    ],
+    "clm-total-carbon": [
+        "California",
+        "carbon",
+        "ecosystem"
+    ],
+    "clm-annual-biomass-data-2001-2021-litter-biomass-2021": [
+        "California",
+        "biomass",
+        "shrubland"
+    ],
+    "clm-annual-biomass-data-2001-2021-litter-biomass-2001": [
+        "California",
+        "biomass",
+        "shrubland"
+    ],
+    "clm-annual-biomass-data-2001-2021-aboveground-live-biomass-2021": [
+        "California",
+        "biomass",
+        "carbon storage"
+    ],
+    "clm-annual-biomass-data-2001-2021-standing-dead-biomass-2021": [
+        "California",
+        "biomass",
+        "carbon storage"
+    ],
+    "clm-annual-biomass-data-2001-2021-standing-dead-biomass-2001": [
+        "California",
+        "biomass",
+        "shrubland"
+    ],
+    "clm-annual-biomass-data-2001-2021-aboveground-live-biomass-2001": [
+        "California",
+        "biomass",
+        "carbon storage"
+    ],
+    "clm-annual-biomass-data-2001-2021-belowground-live-biomass-2021": [
+        "California",
+        "biomass",
+        "carbon storage"
+    ],
+    "clm-annual-biomass-data-2001-2021-belowground-live-biomass-2001": [
+        "California",
+        "biomass",
+        "carbon storage"
+    ],
+    "clm-dead-carbon": [
+        "California",
+        "carbon",
+        "fire"
+    ],
+    "clm-aboveground-carbon-turnover-time-and-residency-time": [
+        "California",
+        "carbon",
+        "turnover time"
+    ],
+    "clm-large-tree-carbon": [
+        "California",
+        "carbon sequestration",
+        "large trees"
+    ],
+    "clm-heavy-fuels": [
+        "California",
+        "emissions",
+        "fuel bed"
+    ],
+    "clm-potential-total-smoke-production-index": [
+        "California",
+        "smoke production",
+        "PM2.5"
+    ],
+    "clm-potential-avoided-smoke-production-index": [
+        "California",
+        "smoke emissions",
+        "fire management"
+    ],
+    "clm-damage-potential": [
+        "California",
+        "wildfire",
+        "damage potential"
+    ],
+    "clm-structure-exposure-score": [
+        "California",
+        "wildfire",
+        "hazard"
+    ],
+    "clm-source-of-ember-load-to-buildings": [
+        "California",
+        "embers",
+        "buildings"
+    ],
+    "clm-fire-ignition-probability-human-cause": [
+        "California",
+        "fire ignition",
+        "probability"
+    ],
+    "clm-wildfire-hazard-potential-august-2022": [
+        "California",
+        "wildfire",
+        "hazard"
+    ],
+    "clm-fire-ignition-probability-lightning-cause": [
+        "California",
+        "ignition probability",
+        "lightning"
+    ],
+    "clm-ember-load-index": [
+        "California",
+        "ember load",
+        "fire hazard"
+    ],
+    "clm-ignition-cause-1992-2020-lightning-cause": [
+        "California",
+        "ignition probability",
+        "wildfire"
+    ],
+    "clm-ignition-cause-1992-2020-original-point-data": [
+        "California",
+        "wildfire",
+        "Ignition Cause"
+    ],
+    "clm-ignition-cause-1992-2020-all-causes": [
+        "California",
+        "wildfire",
+        "ignition cause"
+    ],
+    "clm-ignition-cause-1992-2020-human-cause": [
+        "California",
+        "ignition",
+        "wildfire"
+    ],
+    "clm-southern-ca-cost-of-potential-treatments": [
+        "California",
+        "vegetation treatments",
+        "costs"
+    ],
+    "clm-biomass-residues": [
+        "California",
+        "forest residues",
+        "biomass"
+    ],
+    "clm-central-ca-cost-of-potential-treatments": [
+        "California",
+        "vegetation treatments",
+        "costs"
+    ],
+    "clm-sierra-nevada-sawtimber-volume": [
+        "Sierra Nevada",
+        "sawtimber",
+        "biomass"
+    ],
+    "clm-sierra-nevada-biomass-volume": [
+        "Sierra Nevada",
+        "biomass",
+        "wood product industry"
+    ],
+    "clm-sierra-nevada-cost-of-potential-treatments-skidder-sawlog": [
+        "Sierra Nevada",
+        "treatment cost",
+        "sawlog"
+    ],
+    "clm-sierra-nevada-cost-of-potential-treatments-skidder-biomass": [
+        "Sierra Nevada",
+        "biomass",
+        "treatment cost"
+    ],
+    "clm-northern-ca-cost-of-potential-treatments-sawlog-treatment-cost-low": [
+        "Northern California",
+        "sawlog",
+        "treatment cost"
+    ],
+    "clm-northern-ca-cost-of-potential-treatments-biomass-treatment-cost-low": [
+        "Northern California",
+        "biomass",
+        "treatment cost"
+    ],
+    "clm-northern-ca-cost-of-potential-treatments-biomass-treatment-cost-high": [
+        "Northern California",
+        "biomass",
+        "treatment cost"
+    ],
+    "clm-northern-ca-cost-of-potential-treatments-sawlog-treatment-cost-high": [
+        "Northern California",
+        "sawlog",
+        "treatment cost"
+    ]
+}
