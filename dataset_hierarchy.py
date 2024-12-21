@@ -1,10 +1,7 @@
-
 import os
-import json
+
 import requests
-
 from dotenv import load_dotenv
-
 
 load_dotenv()
 
@@ -14,8 +11,8 @@ def get_clm_hierarchy():
     response = requests.get(f"{url}/DatasetCollection/100/taxonomy/33/hierarchy")
     response.raise_for_status()
     return response.json()
-    
-    
+
+
 def get_category(dataset_id, forest):
     for tree in forest:
         if "taxonomy_item_name" in tree.keys() and "children" in tree.keys():
@@ -26,7 +23,7 @@ def get_category(dataset_id, forest):
                     if kid["dataset_id"] == dataset_id:
                         return tree["key"], tree["label"]
                 else:
-                    subtree.append(kid)        
+                    subtree.append(kid)
             if kid:
                 key, label = get_category(dataset_id, subtree)
                 if key:
@@ -35,11 +32,6 @@ def get_category(dataset_id, forest):
             continue
     return None, None
 
-
-def is_unique_title(title):
-    datasets = get_datasets(title, hierarchy)
-    return len(datasets) == 1
-        
 
 def get_datasets(title, forest):
     datasets = []
@@ -53,5 +45,3 @@ def get_datasets(title, forest):
         tmp = get_datasets(title, subtree)
         datasets = datasets + tmp
     return datasets
-
-

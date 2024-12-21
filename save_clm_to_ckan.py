@@ -1,4 +1,3 @@
-
 """
 #
 # Register CLM datasets to CKAN under the organization
@@ -9,7 +8,6 @@
 import json
 import os
 import re
-import unicodedata
 import xml.etree.ElementTree as ET
 import unicodedata
 
@@ -20,14 +18,13 @@ from pyproj import Transformer
 from dataset_hierarchy import get_category, get_clm_hierarchy
 from wms_extent import get_extent_for_wms_layer
 
-
 load_dotenv()
 
 
 def fix_text(input_text):
     if input_text is None:
         return ""
-    
+
     # Replace common problematic characters
     replacements = {
         '\u201d': '"',  # right double quote
@@ -39,14 +36,14 @@ def fix_text(input_text):
         '\u00e2\u0080\u009d': '"',  # corrupted right double quote
         'â': "'",  # another form of corrupted apostrophe
     }
-    
+
     # First normalize the Unicode text
     normalized = unicodedata.normalize('NFKC', input_text)
-    
+
     # Apply all replacements
     for old, new in replacements.items():
         normalized = normalized.replace(old, new)
-    
+
     return normalized
 
 
@@ -89,7 +86,7 @@ def get_wcs_extent(wcs_url, coverage_id):
     if response.status_code != 200:
         # print(f"Failed to retrieve coverage details: {response.status_code} {coverage_id}")
         return None
-    
+
     # Parse the XML response
     root = ET.fromstring(response.content)
 
@@ -128,7 +125,7 @@ def get_wcs_extent(wcs_url, coverage_id):
 def fix_title(text):
     # First apply the standard title case
     title = text.title()
-    
+
     # List of words that should be in specific case
     special_cases = {
         'Ca': 'CA',
@@ -146,17 +143,17 @@ def fix_title(text):
         'Cso': 'CSO'
         # Add more special cases as needed
     }
-    
+
     # Split the title into words
     words = title.split()
-    
+
     # Fix each word if it's in our special cases
     words = [special_cases.get(word, word) for word in words]
-    
+
     # Always capitalize the first word
     if words:
         words[0] = words[0].title()
-    
+
     # Join the words back together
     return ' '.join(words).replace('Sdi:', 'SDI:').replace('Fsh:', 'FSH').replace('(Cso)', '(CSO)')
 
@@ -177,34 +174,33 @@ def slugify(title):
 
 
 def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword_map):
-
     title = fix_text(rrk_dataset['name'])
 
     if label in [
-            "Functional Species Richness",
-            "Annual biomass data (2001-2021)",
-            "Sierra Nevada Cost of Potential Treatments",
-            "Northern CA Cost of Potential Treatments",
-            "Ignition Cause -1992-2020",
-            "Fire Return Interval Departure (FRID)",
-            "Sierra Nevada - Large Tree Density",
-            "Northern CA - Large Tree Density",
-            "Density - Snags",
-            "SDI: Stand Density Index",
-            "SDI: Proportion of Max",
-            "Distribution of Above Ground Live Biomass in Vegetation Type Categories",
-            "Climate refugia (MIROC MODEL - hotter and drier)",
-            "American Indian Or Alaska Native Race Alone And Multi-Race Population Concentration",
-            "Hispanic and Latino Population Concentration",
-            "Black and African American Population Concentration",
-            "Hispanic and Latino Population Concentration",
-            "Asian Population Concentration",
-            "Multi-race, Except Part-American Indian Pop. Concentration",
-            "Low Income Population Concentration",
-            "Hispanic and or Black, Indigenous Or People of Color (HSPBIPOC) Population Concentration",
+        "Functional Species Richness",
+        "Annual biomass data (2001-2021)",
+        "Sierra Nevada Cost of Potential Treatments",
+        "Northern CA Cost of Potential Treatments",
+        "Ignition Cause -1992-2020",
+        "Fire Return Interval Departure (FRID)",
+        "Sierra Nevada - Large Tree Density",
+        "Northern CA - Large Tree Density",
+        "Density - Snags",
+        "SDI: Stand Density Index",
+        "SDI: Proportion of Max",
+        "Distribution of Above Ground Live Biomass in Vegetation Type Categories",
+        "Climate refugia (MIROC MODEL - hotter and drier)",
+        "American Indian Or Alaska Native Race Alone And Multi-Race Population Concentration",
+        "Hispanic and Latino Population Concentration",
+        "Black and African American Population Concentration",
+        "Hispanic and Latino Population Concentration",
+        "Asian Population Concentration",
+        "Multi-race, Except Part-American Indian Pop. Concentration",
+        "Low Income Population Concentration",
+        "Hispanic and or Black, Indigenous Or People of Color (HSPBIPOC) Population Concentration",
     ]:
         title = f"{label} - {title}"
-    
+
     rrk_package_dict = {
         'name': 'clm-' + slugify(title),
         'title': fix_title(title.title()),
@@ -212,7 +208,7 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
         'type': 'dataset',
         'extras': [],
         'resources': [],
-        'tags':[],
+        'tags': [],
     }
 
     extras = rrk_package_dict['extras']
@@ -229,10 +225,10 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
         "value": category
     })
     extras.append({
-      "key": "Collection Name",
-      "value": "California Landscape Metrics"
+        "key": "Collection Name",
+        "value": "California Landscape Metrics"
     })
-    
+
     for metadata in rrk_dataset['dataset_metadata']:
         if metadata['name'] == 'creation_method':
             extras.append({
@@ -281,13 +277,13 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
     tags = rrk_package_dict['tags']
     for keyword in keywords:
         tags.append({'name': keyword})
-            
+
     gis_service = rrk_dataset['gis_services'][0]
 
     # fix an error
     if gis_service['layer_name'] == 'rrk:predlightningigncause_19922015_202406_t3_v5':
         gis_service['layer_name'] = 'wldfireigncauselightning_19922020_202312_t1_v5'
-    
+
     lat_lon_bbox = get_extent_for_wms_layer(gis_service['layer_name'])
     wcs_extent = None
     if lat_lon_bbox:
@@ -298,15 +294,15 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
                 [lat_lon_bbox[1][1], lat_lon_bbox[0][0]],  # Lower-right corner (lon_max, lat_min)
                 [lat_lon_bbox[1][1], lat_lon_bbox[1][0]],  # Upper-right corner (lon_max, lat_max)
                 [lat_lon_bbox[0][1], lat_lon_bbox[1][0]],  # Upper-left corner (lon_min, lat_max)
-                [lat_lon_bbox[0][1], lat_lon_bbox[0][0]]   # Close the polygon (lon_min, lat_min)
+                [lat_lon_bbox[0][1], lat_lon_bbox[0][0]]  # Close the polygon (lon_min, lat_min)
             ]]
         }
-        
+
         extras.append({
             "key": "spatial",
             "value": json.dumps(spatial_geojson)
         })
-    
+
     wcs_extent = get_wcs_extent("https://sparcal.sdsc.edu/geoserver/rrk/wcs", gis_service['layer_name'])
     if not lat_lon_bbox and wcs_extent:
         lat_lon_bbox = convert_coordinates_to_lat_lon(wcs_extent[0], wcs_extent[1])
@@ -317,16 +313,16 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
                 [lat_lon_bbox[1][1], lat_lon_bbox[0][0]],  # Lower-right corner (lon_max, lat_min)
                 [lat_lon_bbox[1][1], lat_lon_bbox[1][0]],  # Upper-right corner (lon_max, lat_max)
                 [lat_lon_bbox[0][1], lat_lon_bbox[1][0]],  # Upper-left corner (lon_min, lat_max)
-                [lat_lon_bbox[0][1], lat_lon_bbox[0][0]]   # Close the polygon (lon_min, lat_min)
+                [lat_lon_bbox[0][1], lat_lon_bbox[0][0]]  # Close the polygon (lon_min, lat_min)
             ]]
         }
-    
+
         extras.append({
             "key": "spatial",
             "value": json.dumps(spatial_geojson)
         })
-        
-    resources = rrk_package_dict['resources']        
+
+    resources = rrk_package_dict['resources']
     wms_resource = {
         "name": f"{fix_title(title.title())}",
         "description": f"WMS for {fix_title(title.title())}",
@@ -369,7 +365,7 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
             "wfs_srs": "EPSG:3310",
         }
         resources.append(wfs_resource)
-        
+
     return rrk_package_dict
 
 
@@ -444,7 +440,7 @@ def fix_metadata(dataset):
                 "text_value": "2021",
             },
         ]
-        
+
     if dataset['name'] == 'Time Since Last Disturbance':
         dataset["dataset_metadata"] = [
             {
@@ -500,7 +496,7 @@ def validate_org(org_name):
         'X-CKAN-API-Key': api_key,
         'Content-Type': 'application/json'
     }
-    
+
     endpoint = f"{ckan_url}/api/3/action/organization_show"
     params = {
         "id": org_name
@@ -511,14 +507,13 @@ def validate_org(org_name):
     if response.status_code != 200:
         raise BaseException(f"The organization {org_name} doesn't exist in CKAN.")
 
-        
+
 def save_clm_to_ckan():
-    
     # load CLM datasets from fast api
     url = os.getenv('rrk_api_url')
     org = os.getenv('org_ckan_name')
     validate_org(org)
-  
+
     response = requests.get(f"{url}/DatasetCollection/100/Dataset?skip=0&limit=500&order_by=dataset_id&ascending=true")
     response.raise_for_status()
     datasets = response.json()
@@ -542,7 +537,7 @@ def save_clm_to_ckan():
                 has_notes = True
         if not has_notes:
             fix_metadata(dataset)
-                    
+
         # get hierarchy and label 
         category, label = get_category(dataset["dataset_id"], hierarchy)
 
@@ -553,10 +548,10 @@ def save_clm_to_ckan():
             raise ValueError(f'No notes: {package_dict["name"]}')
 
         packages.append(package_dict)
-        
+
         print(f"creating {package_dict['title']}")
         create_dataset(package_dict)
-        
+
     with open("/tmp/rrk.json", "w") as json_file:
         json.dump(packages, json_file, indent=4)
 
@@ -571,4 +566,3 @@ if __name__ == "__main__":
             print(f"Error: No orgnaization in CKAN has the name: {os.getenv('org_ckan_name')}")
         else:
             print(f"Error: {str(e)}")
-
