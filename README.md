@@ -1,1 +1,1 @@
-# Reistering CLM and ITS datasets to CKAN
+# Registering CLM and ITS datasets to CKAN
