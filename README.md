@@ -39,17 +39,14 @@ The code in this repo is used to register datasets from California Landscape Met
 1. **Inconsistent Dataset Names**
 Some datasets had names that were not appropriate for CKAN. Examples include:
 
-`
      “>40” Dbh
      
      “30” - 40” Dbh
-`
 
 Additionally, several datasets used vague region-based names such as "Sierra Nevada", "Northern California", or "Central CA". While these may suffice in category hierarchies, they are unsuitable as CKAN dataset names.
 
 To improve clarity, the script systematically prefixed these dataset names with their category. For example:
 
-`
      Northern CA - Large Tree Density - >40” Dbh
 
      Northern CA - Large Tree Density - 30” - 40” Dbh
@@ -57,7 +54,7 @@ To improve clarity, the script systematically prefixed these dataset names with 
      Hispanic and Latino Population Concentration - Central CA
 
      Asian Population Concentration - Sierra Nevada
-`
+
 
 2. **Keyword Tagging**
 
