@@ -68,7 +68,7 @@ python delete_clm_and_its_from_ckan.py
 
 The tool implements intelligent naming conventions to handle challenging dataset names:
 
-- Clarifies regional datasets by adding category prefixes:
+- Clarifies selected datasets by adding category prefixes:
   - ">40" Dbh" → "Northern CA - Large Tree Density - >40” Dbh"
   - "30” - 40” Dbh" → "Northern CA - Large Tree Density - 30” - 40” Dbh"
   - "Sierra Nevada" → "Asian Population Concentration - Sierra Nevada"
