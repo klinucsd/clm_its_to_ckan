@@ -1,1 +1,1 @@
-# clm_its_to_ckan
+# Reistering CLM and ITS datasets to CKAN
