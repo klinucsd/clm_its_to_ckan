@@ -32,14 +32,16 @@ The code in this repo is used to register datasets from California Landscape Met
 
    	 `python delete_clm_and_its_from_ckan.py`
 
-## Issues handled when registering datasets
+
+## Issues Handled When Registering Datasets
 
 
-### Inconsistent Dataset Names
+1. **Inconsistent Dataset Names**
 Some datasets had names that were not appropriate for CKAN. Examples include:
 
 `
      “>40” Dbh
+     
      “30” - 40” Dbh
 `
 
@@ -49,23 +51,26 @@ To improve clarity, the script systematically prefixed these dataset names with 
 
 `
      Northern CA - Large Tree Density - >40” Dbh
+
      Northern CA - Large Tree Density - 30” - 40” Dbh
+
      Hispanic and Latino Population Concentration - Central CA
+
      Asian Population Concentration - Sierra Nevada
 `
 
-### Keyword Tagging
+2. **Keyword Tagging**
 
 Three keywords were generated for each dataset using an LLM and were manually reviewed as CKAN tags.
 
-###Spatial Metadata
+3. **Spatial Metadata**
 
 The script utilized the bounding box and spatial attributes of each dataset.
 
-###Category Inclusion
+4. **Category Inclusion**
 
 The category of each dataset in CLM was added to its metadata.
 
-### Adding Resources
+5. **Adding Resources**
 
 The script included relevant WMS, WCS, or WFS endpoints for each CLM dataset as resources in CKAN.
