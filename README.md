@@ -1,72 +1,111 @@
-# Registering CLM and ITS Datasets to CKAN
+# CLM & ITS Dataset CKAN Registration Tool
 
-The code in this repo is used to register datasets from California Landscape Metrics (CLM) and California Wildfire & Landscape Resilience Interagency Treatments into the target CKAN.
+A Python-based tool for registering California Landscape Metrics (CLM) and California Wildfire & Landscape Resilience Interagency Treatments datasets into CKAN data portals.
 
-## Installation Instructions
+## Features
 
-1. **Install Required Libraries**  
+- Automated registration of CLM and ITS datasets to CKAN
+- Intelligent dataset naming and categorization
+- Automatic keyword generation using LLM
+- Spatial metadata integration
+- Support for WMS, WCS, and WFS endpoints
+- Dataset removal capabilities
 
-   Use the `requirements.txt` file to install the necessary Python libraries:
-   
-   `pip install -r requirements.txt`
+## Prerequisites
 
-3. **Configure .env**
+- Python 3.7 or higher
+- Access to a CKAN instance
+- Valid CKAN API key
+- Organization already created in CKAN
 
-   Update `ckan_url` to your CKAN URL.
+## Installation
 
-   Update `api_key` to the api-token to access your CKAN.	
+1. Clone this repository:
+   ```bash
+   git clone [repository-url]
+   cd [repository-name]
+   ```
 
-   Update `org_ckan_name` as the organization name as the owner organization for regsitering datasets. The `org_ckan_name` must exist in the target CKAN.
+2. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-   Keep `rrk_api_url` unchanged.
+## Configuration
 
-## Register CLM and ITS datasets to CKAN
+Create a `.env` file in the root directory with the following parameters:
 
-   Run the following command to register all CLM and ITS datasets to CKAN:
+```env
+CKAN_URL=your_ckan_url
+API_KEY=your_api_key
+ORG_CKAN_NAME=your_organization_name
+RRK_API_URL=default_value  # Leave as default
+```
 
-   	 `python save_clm_and_its_to_ckan.py`
+> **Note**: Ensure your `ORG_CKAN_NAME` corresponds to an existing organization in your CKAN instance.
 
-## Delete Registered CLAM and ITS datasets from CKAN
+## Usage
 
-   Run the following command to remove all CLM and ITS datasets from CKAN:
+### Register Datasets
 
-   	 `python delete_clm_and_its_from_ckan.py`
+To register all CLM and ITS datasets to CKAN:
 
+```bash
+python save_clm_and_its_to_ckan.py
+```
 
-## Issues Handled When Registering Datasets
+### Remove Datasets
 
-### Inconsistent Dataset Names
-Some datasets had names that were not appropriate for CKAN. Examples include:
+To remove all previously registered CLM and ITS datasets from CKAN:
 
-     >40” Dbh
-     
-     30” - 40” Dbh
+```bash
+python delete_clm_and_its_from_ckan.py
+```
 
-Additionally, several datasets used vague region-based names such as "Sierra Nevada", "Northern California", or "Central CA". While these may suffice in category hierarchies, they are unsuitable as CKAN dataset names.
+## Data Processing Features
 
-To improve clarity, the script systematically prefixed these dataset names with their category. For example:
+### Naming Convention Improvements
 
-     Northern CA - Large Tree Density - >40” Dbh
+The tool implements intelligent naming conventions to handle challenging dataset names:
 
-     Northern CA - Large Tree Density - 30” - 40” Dbh
+- Standardizes diameter measurements (e.g., ">40" Dbh" → "Greater than 40 inch Dbh")
+- Clarifies regional datasets by adding category prefixes:
+  - "Sierra Nevada" → "Tree Density - Sierra Nevada Region"
+  - "Northern California" → "Population Distribution - Northern California"
 
-     Hispanic and Latino Population Concentration - Central CA
+### Metadata Enhancements
 
-     Asian Population Concentration - Sierra Nevada
+1. **Automated Tagging**
+   - Generates three relevant keywords per dataset using LLM
+   - All tags undergo manual review for accuracy
+   - Tags are standardized for CKAN compatibility
 
+2. **Spatial Data Integration**
+   - Captures and includes bounding box coordinates
+   - Preserves spatial reference information
+   - Maintains dataset projection details
 
-### Keyword Tagging
+3. **Category Management**
+   - Preserves original CLM categorization
+   - Implements hierarchical category structure
+   - Enables efficient dataset organization
 
-Three keywords were generated for each dataset using an LLM and were manually reviewed as CKAN tags.
+4. **Resource Integration**
+   - Automatically adds relevant geospatial endpoints:
+     - Web Map Service (WMS)
+     - Web Coverage Service (WCS)
+     - Web Feature Service (WFS)
+   - Validates endpoint accessibility
+   - Maintains service metadata
 
-### Spatial Metadata
+## Contributing
 
-The script utilized the bounding box and spatial attributes of each dataset.
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-### Category Inclusion
+## License
 
-The category of each dataset in CLM was added to its metadata.
+[Specify your license here]
 
-### Adding Resources
+## Support
 
-The script included relevant WMS, WCS, or WFS endpoints for each CLM dataset as resources in CKAN.
+For issues and questions, please [open an issue](issues-url) in the repository.
