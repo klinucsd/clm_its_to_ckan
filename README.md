@@ -35,8 +35,7 @@ The code in this repo is used to register datasets from California Landscape Met
 
 ## Issues Handled When Registering Datasets
 
-
-1. **Inconsistent Dataset Names**
+### Inconsistent Dataset Names
 Some datasets had names that were not appropriate for CKAN. Examples include:
 
      “>40” Dbh
@@ -56,18 +55,18 @@ To improve clarity, the script systematically prefixed these dataset names with 
      Asian Population Concentration - Sierra Nevada
 
 
-2. **Keyword Tagging**
+### Keyword Tagging
 
 Three keywords were generated for each dataset using an LLM and were manually reviewed as CKAN tags.
 
-3. **Spatial Metadata**
+### Spatial Metadata
 
 The script utilized the bounding box and spatial attributes of each dataset.
 
-4. **Category Inclusion**
+### Category Inclusion
 
 The category of each dataset in CLM was added to its metadata.
 
-5. **Adding Resources**
+### Adding Resources
 
 The script included relevant WMS, WCS, or WFS endpoints for each CLM dataset as resources in CKAN.
