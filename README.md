@@ -22,8 +22,8 @@ A Python-based tool for registering California Landscape Metrics (CLM) and Calif
 
 1. Clone this repository:
    ```bash
-   git clone [repository-url]
-   cd [repository-name]
+   git clone https://github.com/klinucsd/clm_its_to_ckan
+   cd clm_its_to_ckan
    ```
 
 2. Install required dependencies:
@@ -68,8 +68,9 @@ python delete_clm_and_its_from_ckan.py
 
 The tool implements intelligent naming conventions to handle challenging dataset names:
 
-- Standardizes diameter measurements (e.g., ">40" Dbh" → "Greater than 40 inch Dbh")
 - Clarifies regional datasets by adding category prefixes:
+  - ">40" Dbh" → "Northern CA - Large Tree Density - >40” Dbh"
+  - "30” - 40” Dbh" → "Northern CA - Large Tree Density - 30” - 40” Dbh"
   - "Sierra Nevada" → "Tree Density - Sierra Nevada Region"
   - "Northern California" → "Population Distribution - Northern California"
 
@@ -86,9 +87,7 @@ The tool implements intelligent naming conventions to handle challenging dataset
    - Maintains dataset projection details
 
 3. **Category Management**
-   - Preserves original CLM categorization
-   - Implements hierarchical category structure
-   - Enables efficient dataset organization
+   - Preserves original CLM categorization in the dataset medatadata
 
 4. **Resource Integration**
    - Automatically adds relevant geospatial endpoints:
@@ -98,14 +97,4 @@ The tool implements intelligent naming conventions to handle challenging dataset
    - Validates endpoint accessibility
    - Maintains service metadata
 
-## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-## License
-
-[Specify your license here]
-
-## Support
-
-For issues and questions, please [open an issue](issues-url) in the repository.
