@@ -71,8 +71,8 @@ The tool implements intelligent naming conventions to handle challenging dataset
 - Clarifies regional datasets by adding category prefixes:
   - ">40" Dbh" → "Northern CA - Large Tree Density - >40” Dbh"
   - "30” - 40” Dbh" → "Northern CA - Large Tree Density - 30” - 40” Dbh"
-  - "Sierra Nevada" → "Tree Density - Sierra Nevada Region"
-  - "Northern California" → "Population Distribution - Northern California"
+  - "Sierra Nevada" → "Asian Population Concentration - Sierra Nevada"
+  - "Central CA" → "Hispanic and Latino Population Concentration - Central CA"
 
 ### Metadata Enhancements
 
