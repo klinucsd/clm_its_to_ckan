@@ -94,7 +94,7 @@ The tool implements intelligent naming conventions to handle challenging dataset
      - Web Map Service (WMS)
      - Web Coverage Service (WCS)
      - Web Feature Service (WFS)
-   - Validates endpoint accessibility
+   - Uses correct data formats
    - Maintains service metadata
 
 
