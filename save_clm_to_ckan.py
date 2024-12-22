@@ -216,10 +216,12 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
     }
 
     extras = rrk_package_dict['extras']
+    """
     extras.append({
         "key": "Format",
         "value": rrk_dataset['file_type']
     })
+    """
     extras.append({
         "key": "File Name",
         "value": rrk_dataset['file_path']
@@ -355,6 +357,11 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
             "wcs_srs": "EPSG:3310",
         }
         resources.append(wcs_resource)
+
+        extras.append({
+            "key": "format",
+            "value": rrk_dataset['file_type']
+        })
     else:
         wfs_resource = {
             "name": f"{fix_title(title.title())}",
@@ -370,6 +377,11 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
         }
         resources.append(wfs_resource)
 
+        extras.append({
+            "key": "format",
+            "value": "Shapefile"
+        })
+        
     download_url = None
     for download_url in dataset_download_urls:
         if rrk_dataset['file_path'] in download_url:
@@ -378,7 +390,7 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
         download_resource = {
             "name": download_url.split('/').pop(),
             "description": "An HTTP link to download the ZIP file",
-            "format": rrk_dataset['file_type'],
+            "format": rrk_dataset['file_type'] if wcs_extent else 'Shapefile',
             "url": download_url
         }
         resources.append(download_resource)
