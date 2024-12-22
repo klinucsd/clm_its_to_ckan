@@ -143,7 +143,8 @@ def fix_title(text):
         'For': 'for',
         'And': 'and',
         'Sdi': 'SDI',
-        'Cso': 'CSO'
+        'Cso': 'CSO',
+        'Dpu': 'DPU',
         # Add more special cases as needed
     }
     
@@ -330,8 +331,8 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
         
     resources = rrk_package_dict['resources']        
     wms_resource = {
-        "name": f"{fix_title(title.title())}",
-        "description": f"WMS for {fix_title(title.title())}",
+        "name": f"[WMS] {fix_title(title.title())}",
+        "description": f"Web Map Service (WMS) endpoint providing visualization capabilities  for {fix_title(title.title())}. Supports standard WMS operations including GetMap, GetCapabilities, and GetFeatureInfo.",
         "format": "WMS",
         "resource_type": "api",
         "url": "https://sparcal.sdsc.edu/geoserver/rrk/wms",
@@ -345,8 +346,8 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
 
     if wcs_extent:
         wcs_resource = {
-            "name": f"{fix_title(title.title())}",
-            "description": f"WCS for {fix_title(title.title())}",
+            "name": f"[WCS] {fix_title(title.title())}",
+            "description": f"Web Coverage Service (WCS) endpoint providing direct access to the raw raster data values for {fix_title(title.title())}. ",
             "format": "WCS",
             "resource_type": "api",
             "url": "https://sparcal.sdsc.edu/geoserver/rrk/wcs",
@@ -364,8 +365,8 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
         })
     else:
         wfs_resource = {
-            "name": f"{fix_title(title.title())}",
-            "description": f"WFS for {fix_title(title.title())}",
+            "name": f"[WFS] {fix_title(title.title())}",
+            "description": f"Web Feature Service (WFS) endpoint for {fix_title(title.title())}",
             "format": "WFS",
             "resource_type": "api",
             "url": "https://sparcal.sdsc.edu/geoserver/rrk/wfs",
@@ -388,10 +389,13 @@ def transform_to_ckan_package(rrk_dataset, org, category, label, dataset_keyword
             break
     if download_url:
         download_resource = {
-            "name": download_url.split('/').pop(),
-            "description": "An HTTP link to download the ZIP file",
+            "name": f"[DATA] {fix_title(title.title())}",
+            "description": f"Zipped file containing the {rrk_dataset['file_type'] if wcs_extent else 'Shapefile'} data and associated metadata for {fix_title(title.title())}",
+            "resource_type": "file",
             "format": rrk_dataset['file_type'] if wcs_extent else 'Shapefile',
-            "url": download_url
+            "url": download_url,
+            "mimetype": "application/zip",
+            "compression": "zip",
         }
         resources.append(download_resource)
         
